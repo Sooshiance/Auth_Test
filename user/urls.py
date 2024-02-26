@@ -7,6 +7,7 @@ from .views import *
 
 urlpatterns = [
     path('', HomeAPIView.as_view(), name='HOME'),
-    path('api/token/', UserLoginAPIView.as_view(), name='LOGIN'),
+    path('login/', UserLoginAPIView.as_view(), name='LOGIN'),
+    path('register/', UserRegisterationAPIView.as_view(), name='REGISTER'),
     path('api/token/refresh/', jwt_views.TokenRefreshView.as_view(), name='TOKEN_REFERSH'),
 ]
