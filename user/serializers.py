@@ -20,9 +20,6 @@ class UserRegisterSerializer(serializers.ModelSerializer):
     class Meta:
         model = User 
         fields = ['phone', 'email', 'password']
-        
-    def create(self, **validated_data):
-        return super(self, validated_data).create()
 
 
 class LoginUserSerializer(serializers.Serializer):
